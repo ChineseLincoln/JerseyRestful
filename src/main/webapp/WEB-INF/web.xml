@@ -1,0 +1,18 @@
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ 
+    <!-- Servlet declaration can be omitted in which case
+         it would be automatically added by Jersey -->
+    <servlet>
+        <servlet-name>com.drawthink.iguyuan.JerseyApplication</servlet-name>
+    </servlet>
+ 
+    <!-- Servlet mapping can be omitted in case the Application subclass
+         is annotated with @ApplicationPath annotation; in such case
+         the mapping would be automatically added by Jersey -->
+    <servlet-mapping>
+        <servlet-name>com.drawthink.iguyuan.JerseyApplication</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+</web-app>
