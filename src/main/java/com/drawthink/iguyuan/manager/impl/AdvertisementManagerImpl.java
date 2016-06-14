@@ -4,24 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.inject.Inject;
 
+import com.drawthink.iguyuan.dao.AdvertisementDao;
 import com.drawthink.iguyuan.manager.AdvertisementManager;
+import com.drawthink.iguyuan.model.ConvenientBanner;
+import com.drawthink.iguyuan.model.Splash;
 
 @Resource
 public class AdvertisementManagerImpl implements AdvertisementManager{
+	
+	@Inject
+	AdvertisementDao dao;
 
 	@Override
-	public String getSplash() {
-		return "1.png";
+	public Splash getSplash() {
+		return dao.getSplash();
 	}
 
 	@Override
-	public List<String> getConvenientBanner() {
-		List<String> list = new ArrayList<>();
-		list.add("1.png");
-		list.add("2.png");
-		list.add("3.png");
-		return list;
+	public List<ConvenientBanner> getConvenientBanner() {
+		return dao.getConvenientBanner();
 	}
 
 }

@@ -11,7 +11,6 @@ import com.drawthink.iguyuan.config.InjectComponent;
 import com.drawthink.iguyuan.exceptions.ExceptionMappingResource;
 import com.drawthink.iguyuan.filter.AuthorizationRequestFilter;
 
-@ApplicationPath("/api")
 public class JerseyApplication extends ResourceConfig {
     public JerseyApplication() {
         packages("com.drawthink.iguyuan.api");

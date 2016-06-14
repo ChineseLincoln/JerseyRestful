@@ -6,8 +6,6 @@ public class ExceptionResponse {
 	
 	private String Message;
 	
-	private String status;
-
 	public String getCode() {
 		return code;
 	}
@@ -22,14 +20,6 @@ public class ExceptionResponse {
 
 	public void setMessage(String message) {
 		Message = message;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
 	}
 	
 

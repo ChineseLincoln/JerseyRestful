@@ -1,4 +1,4 @@
-package com.drawthink.iguyuan.vo;
+package com.drawthink.iguyuan.exceptions;
 
 public class BaseException extends RuntimeException {  
   

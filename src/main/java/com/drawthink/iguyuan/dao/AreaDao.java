@@ -1,4 +1,4 @@
-package com.drawthink.iguyuan.manager;
+package com.drawthink.iguyuan.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import com.drawthink.iguyuan.model.City;
 import com.drawthink.iguyuan.model.County;
 import com.drawthink.iguyuan.model.Province;
 
-public interface AreaManager {
+public interface AreaDao {
 
 	List<Province> getProvince();
 

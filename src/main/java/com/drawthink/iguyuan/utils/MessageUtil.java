@@ -4,7 +4,7 @@ import java.text.MessageFormat;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
-import com.drawthink.iguyuan.vo.BaseException;
+import com.drawthink.iguyuan.exceptions.BaseException;
 
 public class MessageUtil {
 
@@ -24,7 +24,7 @@ public class MessageUtil {
      * @return 
      */  
     public String getMessage(String exceptionId) {  
-        String message = resourceBoudle.getString(getErrorID(exceptionId));  
+        String message = resourceBoudle.getString(exceptionId);  
         return message;  
     }  
   
@@ -35,7 +35,7 @@ public class MessageUtil {
      * @return 
      */  
     public String getMessage(BaseException e) {  
-        String message = resourceBoudle.getString(getErrorID(e.getMessage()));  
+        String message = resourceBoudle.getString(e.getMessage());  
         Object[] arguments = e.getValues();  
         if (arguments != null) {  
             message = MessageFormat.format(message, arguments);  
@@ -57,17 +57,5 @@ public class MessageUtil {
         } catch (Exception ex) {  
 //             LOGGER.error("Error loading messages properties", ex);  
         }  
-    }  
-  
-    /** 
-     * 根据抛出的异常编号截取与配置文件对应的异常编号 编号E11110——>变成11110 
-     *  
-     * @param exceptionID 
-     *            :example 编号E11110 
-     * @return:变成11110 
-     */  
-    private String getErrorID(String exceptionID) {  
-        exceptionID = exceptionID.substring(1);  
-        return exceptionID;  
     }  
 }
