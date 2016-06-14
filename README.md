@@ -1,7 +1,7 @@
 jersey restful seed Project
-
-使用到的项目
-apache maven
-oracle jersey
-apache common dbutils
+<br>
+使用到的项目<br>
+apache maven<br>
+oracle jersey<br>
+apache common dbutils<br>
 alibaba druid
