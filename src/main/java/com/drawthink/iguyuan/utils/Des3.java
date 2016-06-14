@@ -18,9 +18,9 @@ import javax.crypto.spec.IvParameterSpec;
  */
 public class Des3 { // 密钥
     // 密钥 长度不得小于24
-    public final static byte[] secretKey = "sD!omaPDT;M{xw:G'F3lqQ6E".getBytes();
+    public final static byte[] secretKey = "123456789012345678901234".getBytes();
     // 向量 可有可无 终端后台也要约定
-    public final static byte[] iv = "J#6`~sel".getBytes();
+    public final static byte[] iv = "12345678".getBytes();
 
     /**
      * ECB加密,不要IV
