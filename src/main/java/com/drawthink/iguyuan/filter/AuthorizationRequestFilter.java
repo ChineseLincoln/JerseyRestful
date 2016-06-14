@@ -19,7 +19,7 @@ public class AuthorizationRequestFilter implements ContainerRequestFilter {
 	@Override
 	public void filter(ContainerRequestContext requestContext)
 			throws IOException {
-		String authStr = Strings.nullToEmpty(requestContext.getHeaderString("auth-drawthink"));
+		String authStr = Strings.nullToEmpty(requestContext.getHeaderString("your auth"));
 		if(Strings.isNullOrEmpty(authStr)){
 			requestContext.abortWith(Response
 					.status(Response.Status.UNAUTHORIZED)
@@ -31,7 +31,7 @@ public class AuthorizationRequestFilter implements ContainerRequestFilter {
 			try {
 				desDecodeStr = Des3.des3DecodeCBC(Des3.secretKey, Des3.iv, base64DecodeStr);
 				String decodeStr = new String(desDecodeStr);
-				if(!decodeStr.startsWith("iguyuan@drawthink.com&5670007&")){
+				if(!decodeStr.startsWith("auth keys")){
 					requestContext.abortWith(Response
 							.status(Response.Status.UNAUTHORIZED)
 							.entity("ENCRYPTION ERROR")
